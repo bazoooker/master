@@ -1,0 +1,21 @@
+// base
+@import "base/mixin";
+@import "base/normalize";
+
+
+// components
+@import "components/accordeon";
+
+
+// libs
+@import "libs/animate";
+
+
+// custom css
+.wrapper {
+	width: 100%;
+}
+
+body {
+	background-color: black !important;
+}

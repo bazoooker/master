@@ -1,21 +1,19 @@
-// base
+
+@import "../../node_modules/rfs/sass";
 @import "base/mixin";
+@import "base/var";
 @import "base/normalize";
-
-
-// components
+@import "base/typography";
+@import "base/utilities";
 @import "components/accordeon";
 
 
-// libs
 @import "libs/animate";
 
 
-// custom css
 .wrapper {
-	width: 100%;
 }
 
 body {
-	background-color: black !important;
+ 	@include font-size(40);
 }

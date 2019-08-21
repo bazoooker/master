@@ -10,9 +10,9 @@ const plumber                       = require('gulp-plumber');
 
 
 function cssIntoSass() {
-	return src('app/scss/**/*.scss')
+	return src('app/scss/*.scss')
         .pipe(plumber())
-    	.pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass())
     	.pipe(rename("main.min.css"))
     	.pipe(dest('dist/css'))
     	.pipe(browserSync.stream());

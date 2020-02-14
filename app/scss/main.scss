@@ -1,19 +1,48 @@
 
-@import "../../node_modules/rfs/sass";
+@import "../../node_modules/rfs/sass"; //адаптивные шрифты
+@import "base/var"; // переменные для переопределения бутстраповских
+@import "../../node_modules/bootstrap/scss/bootstrap"; // css бутстрапа
+
+
 @import "base/mixin";
-@import "base/var";
-@import "base/normalize";
+// @import "base/normalize";
 @import "base/typography";
 @import "base/utilities";
-@import "components/accordeon";
+// @import "components/accordeon";
 
 
 @import "libs/animate";
+@import "libs/grtyoutube-popup";
+@import "libs/ion-rangeslider";
+@import "libs/swiper.min";
 
 
-.wrapper {
+
+@import "components/btn";
+
+
+
+h1 {
+	color: black;
 }
 
-body {
- 	@include font-size(40);
+
+
+
+
+// брейкпоинты
+@include media-breakpoint-down(lg) {
+	
+}
+@include media-breakpoint-down(md) { 
+	
+}
+@include media-breakpoint-down(sm) {
+	
+}
+@include media-breakpoint-down(xs) {
+	
+}
+@include media-breakpoint-down(xxs) {
+	
 }

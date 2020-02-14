@@ -537,13 +537,13 @@ Build date: 2018-12-11 23:23:51
 .irs--round .irs-line {
   top: 12px;
   height: 2px;
-  background-color: $gray2;
+  background-color: black;
   border-radius: 4px;
 }
 .irs--round .irs-bar {
   top: 12px;
   height: 2px;
-  background-color: $black;
+  background-color: $info;
 }
 .irs--round .irs-bar--single {
   border-radius: 4px 0 0 4px;
@@ -557,11 +557,11 @@ Build date: 2018-12-11 23:23:51
   top: 2px;
   width: 25px;
   height: 25px;
-  border: 2px solid $black;
+  border: 2px solid $info;
   background-color: white;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color $tr2;
+  transition: background-color 300ms;
 
   &:hover {
   	background-color: $yellow;

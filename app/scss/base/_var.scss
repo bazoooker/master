@@ -1,24 +1,36 @@
-// variables
+
+// bootstrap colors
+$primary:       green;
+$secondary:     black;
+$success:       red;
+$info:          red;
+$warning:       red;
+$danger:        red;
+$light:         red;
+$dark:          red;
 
 
 
-// colors
-$color-font 	: red;
-$color-main 	: red;
-$color-second 	: red;
-$color-success 	: red;
-$color-danger 	: red;
-$color-warning 	: red;
+
+
+// Spacing
+$spacer: 30px;
 
 
 
 
+// Body
+$body-color:                lightgray;
 
 
 
 
 // grid
-$col-width: 100% / 12;
-
-// gutters
-$gutter: 20px;
+$grid-breakpoints: (
+  xxs: 0px,
+  xs: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;

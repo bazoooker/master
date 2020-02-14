@@ -7,6 +7,7 @@ const concat 						= require('gulp-concat');
 const uglify 						= require('gulp-uglify');
 const pipeline 						= require('readable-stream').pipeline;
 const plumber                       = require('gulp-plumber');
+const beautify                      = require('gulp-beautify');
 
 
 function cssIntoSass() {
@@ -19,6 +20,13 @@ function cssIntoSass() {
 };
 
 
+function beautifyHtml() {
+        return src('dist/*.html')
+        .pipe(beautify.html({ indent_size: 4 }))
+        .pipe(dest('dist/'));
+};
+
+
 function scripts() {
 	return src('app/js/**/*.js')
         .pipe(plumber())
@@ -27,7 +35,7 @@ function scripts() {
         .pipe(rename("main.min.js"))
     	.pipe(dest('dist/js'))
     	.pipe(browserSync.stream());
-}
+};
 
 
 function serve() {
@@ -38,10 +46,12 @@ function serve() {
     });
 	watch( './app/js/*.js').on('change', series(scripts));
 	watch( './app/scss/**/*.scss').on('change', series(cssIntoSass));
-	watch( 'dist/*.html').on('change', browserSync.reload );
+	watch( 'dist/*.html').on('change', beautifyHtml );
+    watch( 'dist/*.html').on('change', browserSync.reload );
 };
 
 
 exports.scripts = scripts;
 exports.cssIntoSass = cssIntoSass;
-exports.default = series(scripts, cssIntoSass, serve);
+exports.beautify = beautify;
+exports.default = series(scripts, cssIntoSass, serve, beautifyHtml );
